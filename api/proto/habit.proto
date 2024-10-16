@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package habits;
+option go_package = "habit_tracker/habits/api";
+
+
+message Habit {
+    // Name of the habit, cannot be empty
+    string name = 1;
+    // Frequency, expressed in time per week.
+    int32 weekly_frequency = 2;
+}
