@@ -12,8 +12,8 @@ type Logger struct {
 	logger *log.Logger
 }
 
-func New(output io.Writer) *Logger {
-	return &Logger{
+func New(output io.Writer) Logger {
+	return Logger{
 		logger: log.New(output, "", log.Ldate|log.Ltime),
 	}
 }
